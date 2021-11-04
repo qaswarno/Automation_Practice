@@ -1,0 +1,628 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Open the index page and log in to the site",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 30993213300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is at the index page",
+            "match": {
+              "location": "HomePageSteps.user_is_at_the_index_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6349805900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on the Sign in link",
+            "match": {
+              "location": "HomePageSteps.user_clicks_on_the_Sign_in_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8572200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify Sign in page opens",
+            "match": {
+              "location": "LoginPageSteps.sign_in_page_opens()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3364018700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user logged in to the site",
+            "match": {
+              "location": "LoginPageSteps.user_logged_in_to_the_site()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52610300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify MyAccount page opens",
+            "match": {
+              "location": "MyAccountPageSteps.myaccount_page_opens()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11096700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarioStart()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Purchase Tshirt product and verify the order",
+        "description": "",
+        "id": "purchase-tshirt-and-update-first-name;purchase-tshirt-product-and-verify-the-order",
+        "after": [
+          {
+            "result": {
+              "duration": 232700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Take_Screenshot_afterScenarioFinish(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 6777783200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenarioFinish()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5560382800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user clicks on the \"T-shirts\" product category link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "T-shirts",
+                  "offset": 20
+                }
+              ],
+              "location": "MyAccountPageSteps.user_clicks_on_the_product_link(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7773300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "verify \"T-shirts\" product category page opened",
+            "match": {
+              "arguments": [
+                {
+                  "val": "T-shirts",
+                  "offset": 8
+                }
+              ],
+              "location": "Product_Listing_and_checkout_PageSteps.verify_product_page_opened(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 97211400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user scroll to \"T-shirts\" product listing section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "T-shirts",
+                  "offset": 16
+                }
+              ],
+              "location": "Product_Listing_and_checkout_PageSteps.user_scroll_to_product_listing_section(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2481732300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "click Add To Cart button for \"Faded Short Sleeve T-shirts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Faded Short Sleeve T-shirts",
+                  "offset": 30
+                }
+              ],
+              "location": "Product_Listing_and_checkout_PageSteps.added_into_cart(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 292779300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "verify the desired Product and correct price is showing for checkout",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.verify_the_desired_Product_showing_for_checkout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3768634200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user clicks on proceed to checkout button from popup",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.proceed_to_checkout_popup()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 54630500,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user redirect to shopping cart page",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_redirect_to_shopping_cart_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 209430400,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user verifies the product and price",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_verifies_the_shopping_cart_product_and_price()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2993398400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user clicks on proceed to checkout button from shopping cart page",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_clicks_on_proceed_to_checkout_button_from_shopping_cart_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63629000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "landed on the Addresses tab",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.landed_on_the_Addresses_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2104172200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user clicks on proceed to checkout button",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_clicks_on_proceed_to_checkout_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 54118600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "landed on the shipping tab",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.landed_on_the_shipping_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 161765800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user accept the terms and condition",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_accept_the_terms_and_condition()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4612723500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user clicks on proceed to checkout button",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_clicks_on_proceed_to_checkout_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 50310100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user landed on payment tab",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_landed_on_payment_tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 189473100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user verifies the product and price",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_verifies_the_shopping_cart_product_and_price()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2290915700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user selects the payment method",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_selects_the_payment_method()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84689500,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user landed on the order summary tab",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_landed_on_the_order_summary_tab()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 79313500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user verifies the payment method and order amount",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_verifies_the_payment_method_and_order_amount()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6937013400,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on confirm order button",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_clicks_on_confirm_order_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 40686400,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user landed on order confirmation page",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_landed_on_order_confirmation_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70165500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user verifies the order price at order confirmation page",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_verifies_the_order_price_at_order_confirmation_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63509000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "get the order reference id for future reference",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.get_order_reference_id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3289880900,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "user clicks on back to order link",
+            "match": {
+              "location": "Product_Listing_and_checkout_PageSteps.user_clicks_on_back_to_order_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 51392900,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user landed on order history page",
+            "match": {
+              "location": "Order_HistoryPageSteps.user_landed_on_order_history_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 166285700,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "user verifies the order reference payment method and order price",
+            "match": {
+              "location": "Order_HistoryPageSteps.user_verifies_the_order_reference_payment_method_and_order_price()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 13,
+            "name": "@PurchaseTShirtProduct"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Open the index page and log in to the site",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15403332100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is at the index page",
+            "match": {
+              "location": "HomePageSteps.user_is_at_the_index_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4215024300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on the Sign in link",
+            "match": {
+              "location": "HomePageSteps.user_clicks_on_the_Sign_in_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21477700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify Sign in page opens",
+            "match": {
+              "location": "LoginPageSteps.sign_in_page_opens()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3810903000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user logged in to the site",
+            "match": {
+              "location": "LoginPageSteps.user_logged_in_to_the_site()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53063600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "verify MyAccount page opens",
+            "match": {
+              "location": "MyAccountPageSteps.myaccount_page_opens()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 774900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarioStart()"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Update user First Name from Personal information",
+        "description": "",
+        "id": "purchase-tshirt-and-update-first-name;update-user-first-name-from-personal-information",
+        "after": [
+          {
+            "result": {
+              "duration": 26900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Take_Screenshot_afterScenarioFinish(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5895235100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenarioFinish()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1855142100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user clicks on My Personal Information button",
+            "match": {
+              "location": "MyAccountPageSteps.user_clicks_on_My_Personal_Information_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53581300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "landed on the Personal information page",
+            "match": {
+              "location": "MyAccountPageSteps.landed_on_the_Personal_information_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4018563100,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user enters updated FirstName and clicks on save button",
+            "match": {
+              "location": "MyAccountPageSteps.user_enters_updated_FirstName_and_clicks_on_save_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55583600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "varifies updated FirstName at the header",
+            "match": {
+              "location": "MyAccountPageSteps.varifies_updated_FirstName_at_the_header()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 43,
+            "name": "@UpdateFirstName"
+          }
+        ]
+      }
+    ],
+    "name": "Purchase TShirt and Update First Name",
+    "description": " Description:This feature is to test the product purchase scenario and verifies the generated order and also verifies \n First name updatation done correctly",
+    "id": "purchase-tshirt-and-update-first-name",
+    "keyword": "Feature",
+    "uri": "Test_Scenarios.feature"
+  }
+]
