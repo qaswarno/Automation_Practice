@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 4, 2021 11:48:40 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 5, 2021 07:49:47 PM</span>
 				</a>
 			</li>
 			<li>
@@ -169,7 +169,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>40</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>15</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -189,7 +189,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Purchase TShirt and Update First Name</span>
-						<span class='test-time'>Nov 4, 2021 11:48:40 PM</span>
+						<span class='test-time'>Nov 5, 2021 07:49:47 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -197,7 +197,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@PurchaseTShirtProduct</span>
 	</div>
-	<span class='duration right label'>0h 1m 16s+898ms</span>
+	<span class='duration right label'>0h 3m 22s+438ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Purchase Tshirt product and verify the order</span>
@@ -207,35 +207,11 @@
 			
 			<b>Given</b>
 			
-			<span class="bdd-step-name">Given user is at the index page</span>
+			<span class="bdd-step-name">Given user opens the site and logged in</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='4' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user clicks on the Sign in link</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='5' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And verify Sign in page opens</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='6' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user logged in to the site</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='7' class='node and pass' status='pass'>
+		<li test-id='4' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
@@ -243,191 +219,39 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='8' class='node then pass' status='pass'>
+		<li test-id='5' class='node given pass' status='pass'>
 			
-			<b>Then</b>
+			<b>Given</b>
 			
-			<span class="bdd-step-name">Then user clicks on the "T-shirts" product category link</span>
+			<span class="bdd-step-name">Given user clicks on the "T-shirts" product category link</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='9' class='node and pass' status='pass'>
+		<li test-id='6' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And verify "T-shirts" product category page opened</span>
+			<span class="bdd-step-name">And choose "Faded Short Sleeve T-shirts" product for purchase</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='10' class='node then pass' status='pass'>
+		<li test-id='7' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
-			<span class="bdd-step-name">Then user scroll to "T-shirts" product listing section</span>
+			<span class="bdd-step-name">Then proceed through the checkout process</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='11' class='node and pass' status='pass'>
+		<li test-id='8' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And click Add To Cart button for "Faded Short Sleeve T-shirts"</span>
+			<span class="bdd-step-name">And get the order reference id from Order Confirmation page for future reference</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='12' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And verify the desired Product and correct price is showing for checkout</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='13' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user clicks on proceed to checkout button from popup</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='14' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user redirect to shopping cart page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='15' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user verifies the product and price</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='16' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user clicks on proceed to checkout button from shopping cart page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='17' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And landed on the Addresses tab</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='18' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user clicks on proceed to checkout button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='19' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And landed on the shipping tab</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='20' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user accept the terms and condition</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='21' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user clicks on proceed to checkout button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='22' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user landed on payment tab</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='23' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user verifies the product and price</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='24' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user selects the payment method</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='25' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user landed on the order summary tab</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='26' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user verifies the payment method and order amount</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='27' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user clicks on confirm order button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='28' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And user landed on order confirmation page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='29' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user verifies the order price at order confirmation page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='30' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And get the order reference id for future reference</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='31' class='node then pass' status='pass'>
+		<li test-id='9' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -435,15 +259,15 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='32' class='node and pass' status='pass'>
+		<li test-id='10' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And user landed on order history page</span>
+			<span class="bdd-step-name">And landed on order history page</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='33' class='node then pass' status='pass'>
+		<li test-id='11' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -453,49 +277,25 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='34' status='pass'>
+<div class='scenario node' test-id='12' status='pass'>
 	<div class='category-list'>
 		<span class='category label white-text'>@UpdateFirstName</span>
 	</div>
-	<span class='duration right label'>0h 0m 29s+573ms</span>
+	<span class='duration right label'>0h 0m 59s+259ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Update user First Name from Personal information</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='35' class='node given pass' status='pass'>
+		<li test-id='13' class='node given pass' status='pass'>
 			
 			<b>Given</b>
 			
-			<span class="bdd-step-name">Given user is at the index page</span>
+			<span class="bdd-step-name">Given user opens the site and logged in</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='36' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user clicks on the Sign in link</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='37' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And verify Sign in page opens</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='38' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user logged in to the site</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='39' class='node and pass' status='pass'>
+		<li test-id='14' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
@@ -503,7 +303,7 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='40' class='node then pass' status='pass'>
+		<li test-id='15' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -511,7 +311,7 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='41' class='node and pass' status='pass'>
+		<li test-id='16' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
@@ -519,7 +319,7 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='42' class='node then pass' status='pass'>
+		<li test-id='17' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -527,7 +327,7 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='43' class='node and pass' status='pass'>
+		<li test-id='18' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
@@ -614,7 +414,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 4, 2021 11:48:40 PM</td>
+										<td>Nov 5, 2021 07:49:47 PM</td>
 										<td class='linked' test-id='2'>Purchase TShirt and Update First Name.Purchase Tshirt product and verify the order</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -648,8 +448,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 4, 2021 11:50:04 PM</td>
-										<td class='linked' test-id='34'>Purchase TShirt and Update First Name.Update user First Name from Personal information</td>
+										<td>Nov 5, 2021 07:53:18 PM</td>
+										<td class='linked' test-id='12'>Purchase TShirt and Update First Name.Update user First Name from Personal information</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -690,25 +490,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>40</div>
+					<div class='panel-lead'>15</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 4, 2021 11:48:40 PM</div>
+					<div class='panel-lead'>Nov 5, 2021 07:49:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 4, 2021 11:50:40 PM</div>
+			 		<div class='panel-lead'>Nov 5, 2021 07:54:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>120,224ms</div>
+					<div class='panel-lead'>283,197ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -764,7 +564,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 40,
+				passGrandChild: 15,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

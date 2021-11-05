@@ -165,5 +165,23 @@ public class TestUtil extends TestBase {
 		}
 		return element;
 	}
+	
+	/**
+	 * This function finds the element and return that element
+	 * 
+	 * @param locator locator
+	 * @return WebElement
+	 */
 
+	public static WebElement getElement(By by) {
+		WebElement element = null;
+		try {
+			element = driver.findElement(by);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return element;
+	}
+
+	
 }

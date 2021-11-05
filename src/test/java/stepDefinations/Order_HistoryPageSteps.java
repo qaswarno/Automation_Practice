@@ -23,7 +23,7 @@ public class Order_HistoryPageSteps extends TestBase {
 	 */
 	
 
-	@And("^user landed on order history page$")
+	@And("^landed on order history page$")
 	public void user_landed_on_order_history_page() throws Throwable {
 		String breadcumb_text=Order_History.get_breadcrumb_text();
 		assertTrue(breadcumb_text.contains(prop.getProperty("order_history_expected_breadcrumb_contains")));

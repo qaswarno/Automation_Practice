@@ -25,6 +25,7 @@ public class Hooks extends TestBase {
 	@Before(order = 1)
 	public void beforeScenarioStart() throws Exception {
 
+		TestBase.initialization();
 		if (Hooks.execution == 0) {
 			FileUtils
 					.cleanDirectory(new File(System.getProperty("user.dir") + prop.getProperty("ScreenshotDirectory")));

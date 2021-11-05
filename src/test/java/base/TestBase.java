@@ -2,6 +2,8 @@ package base;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -22,17 +24,18 @@ public class TestBase {
 	
 	/**
 	 * This is a default constructor for TestBase
+	 * @throws IOException 
 	 */
 	
 	public TestBase() {
 		try {
 			prop = new Properties();
-			File f = new File(System.getProperty("user.dir") + "/src/test/java/configuration/global.properties");
-			FileInputStream fis = new FileInputStream(f);
+			File file = new File(System.getProperty("user.dir") + "/src/test/java/configuration/global.properties");
+			FileInputStream fis = new FileInputStream(file);
 			prop.load(fis);
-		} catch (Exception e) {
+		} catch (IOException exp) {
 
-			e.getMessage();
+			exp.getMessage();
 		}
 
 	}

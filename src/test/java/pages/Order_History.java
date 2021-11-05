@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import base.TestBase;
@@ -17,10 +18,10 @@ public class Order_History extends TestBase {
 	public static String order_price;
 	public static String payment_method;
 
-	public static String order_history_breadcrumb_text = "//span[contains(@class,'navigation_page')]";
-	public static String order_reference = "//tr[contains(@class,'first_item')]//a[@class='color-myaccount']";
-	public static String orderprice = "//tr[contains(@class,'first_item')]//span[@class='price']";
-	public static String paymentmethod = "//tr[contains(@class,'first_item')]//td[@class='history_method']";
+	public static By order_history_breadcrumb_text =By.xpath("//span[contains(@class,'navigation_page')]");
+	public static By order_reference =By.xpath("//tr[contains(@class,'first_item')]//a[@class='color-myaccount']");
+	public static By orderprice=By.xpath("//tr[contains(@class,'first_item')]//span[@class='price']");
+	public static By paymentmethod =By.xpath("//tr[contains(@class,'first_item')]//td[@class='history_method']");
 
 	/**
 	 * This is the default constructor of the Order_History page
@@ -55,7 +56,7 @@ public class Order_History extends TestBase {
 	public static String get_breadcrumb_text() {
 
 		String breadcrumb_text = TestUtil
-				.Gettext(TestUtil.getElementByXpath(Order_History.order_history_breadcrumb_text));
+				.Gettext(TestUtil.getElement(Order_History.order_history_breadcrumb_text));
 		return breadcrumb_text;
 
 	}
@@ -69,7 +70,7 @@ public class Order_History extends TestBase {
 
 	public static String get_order_reference_id() {
 
-		String orderreference = TestUtil.Gettext(TestUtil.getElementByXpath(Order_History.order_reference));
+		String orderreference = TestUtil.Gettext(TestUtil.getElement(Order_History.order_reference));
 		return orderreference;
 
 	}
@@ -83,8 +84,8 @@ public class Order_History extends TestBase {
 
 	public static String get_order_price() {
 
-		String orderprice = TestUtil.Gettext(TestUtil.getElementByXpath(Order_History.orderprice));
-		return orderprice;
+		String orderprice = TestUtil.Gettext(TestUtil.getElement(Order_History.orderprice));
+		return orderprice;		
 
 	}
 
@@ -97,7 +98,7 @@ public class Order_History extends TestBase {
 
 	public static String get_payment_method() {
 
-		String payment_method = TestUtil.Gettext(TestUtil.getElementByXpath(Order_History.paymentmethod));
+		String payment_method = TestUtil.Gettext(TestUtil.getElement(Order_History.paymentmethod));
 		return payment_method;
 
 	}

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import base.TestBase;
-import utility.ExplicitWait;
+import utility.JavaUtility;
 import utility.TestUtil;
 
 /**
@@ -14,10 +14,10 @@ import utility.TestUtil;
 public class LoginPage extends TestBase {
 
 	public static WebDriver driver;
-	public static String already_register_heading = "//h3[contains(text(),'Already registered')]";
-	public static String email_textfield = "email";
-	public static String password_textfield = "passwd";
-	public static String login_button = "SubmitLogin";
+	public static By already_register_heading = By.xpath("//h3[contains(text(),'Already registered')]");
+	public static By email_textfield = By.id("email");
+	public static By password_textfield = By.id("passwd");
+	public static By login_button =By.id("SubmitLogin");
 
 	/**
 	 * This is the default constructor of the login page
@@ -52,12 +52,12 @@ public class LoginPage extends TestBase {
 
 	public static MyAccount login(String username, String Password) {
 
-		ExplicitWait.wait_for_element_present(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
-				By.xpath(LoginPage.already_register_heading), driver);
+		JavaUtility.wait_for_element_present(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
+				already_register_heading, driver);
 
-		TestUtil.Entertext(TestUtil.getElementById(LoginPage.email_textfield), username);
-		TestUtil.Entertext(TestUtil.getElementById(LoginPage.password_textfield), Password);
-		TestUtil.click(TestUtil.getElementById(LoginPage.login_button));
+		TestUtil.Entertext(TestUtil.getElement(LoginPage.email_textfield), username);
+		TestUtil.Entertext(TestUtil.getElement(LoginPage.password_textfield), Password);
+		TestUtil.click(TestUtil.getElement(LoginPage.login_button));
 		return new MyAccount(driver);
 
 	}

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import base.TestBase;
-import utility.ExplicitWait;
+import utility.JavaUtility;
 import utility.TestUtil;
 
 /**
@@ -15,7 +15,7 @@ import utility.TestUtil;
 public class HomePage extends TestBase {
 
 	public static WebDriver driver;
-	public static String signinlink = "//a[contains(text(),'Sign in')]";
+	public static By signinlink =By.xpath("//a[contains(text(),'Sign in')]");
 
 	/**
 	 * This is the default constructor of the Home page
@@ -47,9 +47,9 @@ public class HomePage extends TestBase {
 
 	public static LoginPage open_Login_Page() {
 
-		ExplicitWait.wait_for_element_clickable(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
-				By.xpath(HomePage.signinlink), driver);
-		TestUtil.click(TestUtil.getElementByXpath(HomePage.signinlink));
+		JavaUtility.wait_for_element_clickable(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
+				signinlink, driver);
+		TestUtil.click(TestUtil.getElement(HomePage.signinlink));
 		return new LoginPage(driver);
 
 	}
