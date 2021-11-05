@@ -41,7 +41,7 @@ public class Hooks extends TestBase {
 	 */
 	
 	@After(order = 1)
-	public void Take_Screenshot_afterScenarioFinish(Scenario scenario) throws Exception {
+	public void take_Screenshot_AfterScenarioFinish(Scenario scenario) throws Exception {
 		if (scenario.isFailed()) {
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
 			try {
