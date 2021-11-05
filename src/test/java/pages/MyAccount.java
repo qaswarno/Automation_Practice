@@ -23,8 +23,10 @@ public class MyAccount extends TestBase {
 	public static By firstname_id = By.id("firstname");
 	public static By current_password_id = By.id("old_passwd");
 	public static By save_personal_info_button = By.xpath("//button[contains(@name,'submitIdentity')]");
-	public static By personal_info_update_success_message_block = By.xpath("//p[contains(@class,'alert alert-success')]");
-	public static By back_to_my_account_button = By.xpath("//ul[contains(@class,'footer_links')]//a[contains(@href,'my-account')]");
+	public static By personal_info_update_success_message_block = By
+			.xpath("//p[contains(@class,'alert alert-success')]");
+	public static By back_to_my_account_button = By
+			.xpath("//ul[contains(@class,'footer_links')]//a[contains(@href,'my-account')]");
 
 	/**
 	 * This is the default constructor of the My Account page
@@ -70,7 +72,7 @@ public class MyAccount extends TestBase {
 	 * This function clicks the Personal Information button for updating personal
 	 * information
 	 */
-	public static void click_personal_information() {
+	public static void click_Personal_Information() {
 
 		TestUtil.click(TestUtil.getElement(MyAccount.personal_information));
 
@@ -81,7 +83,7 @@ public class MyAccount extends TestBase {
 	 * 
 	 * @return the breadcrumb text of personal information page
 	 */
-	public static String get_personal_info_breadcrumb_text() {
+	public static String get_Personal_Info_Breadcrumb_Text() {
 
 		String breadcrumb_text = TestUtil.Gettext(TestUtil.getElement(MyAccount.page_breadcrumb));
 		return breadcrumb_text;
@@ -96,7 +98,7 @@ public class MyAccount extends TestBase {
 	 * @param old_password holds the info of the current password
 	 */
 
-	public static void update_firstname_personal_info(String firstname, String old_password) {
+	public static void update_Firstname_Personal_Info(String firstname, String old_password) {
 
 		JSLibrary.ScrollintoView(driver, TestUtil.getElement(MyAccount.firstname_id));
 
@@ -117,7 +119,7 @@ public class MyAccount extends TestBase {
 	 * 
 	 * @return the User's name displaying at the header
 	 */
-	public static String get_user_name_from_header() {
+	public static String get_User_Name_From_Header() {
 
 		String header_user_name = TestUtil.Gettext(TestUtil.getElement(MyAccount.header_user_name));
 		return header_user_name;

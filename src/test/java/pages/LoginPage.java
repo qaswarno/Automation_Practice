@@ -35,7 +35,7 @@ public class LoginPage extends TestBase {
 	 * @return Login page title
 	 */
 
-	public static String return_login_Page_title() {
+	public static String return_Login_Page_Title() {
 
 		String login_page_title = TestUtil.pageTitle();
 		return login_page_title;

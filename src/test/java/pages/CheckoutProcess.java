@@ -39,6 +39,10 @@ public class CheckoutProcess extends TestBase {
 	public static By order_confirmation_price = By.xpath("//span[contains(@class,'price')]/strong");
 	public static By order_confirmation_text = By.xpath("//div[@class='box']");
 	public static By order_history_link = By.xpath("//a[contains(@title,'Back to orders')]");
+	public static String product_category_locator_start = "//h1[starts-with(@class,'page-heading')]/span[contains(text(),'";
+	public static String product_locator_start = "//a[contains(text(),'";
+	public static String payment_method_locator_start = "//a[contains(@class,'";
+	public static String locator_end_common = "')]";
 
 	/**
 	 * This is the default constructor of the Product_Listing_and_Checkout page
@@ -56,7 +60,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return the page title of ProductListing page
 	 */
 
-	public static String return_ProductListing_Page_title() {
+	public static String return_ProductListing_Page_Title() {
 
 		String login_page_title = TestUtil.pageTitle();
 		return login_page_title;
@@ -69,10 +73,10 @@ public class CheckoutProcess extends TestBase {
 	 * @param Product_category holds the product category name
 	 */
 
-	public static void scroll_to_product_listing_section(String Product_category) {
+	public static void scroll_To_Product_Listing_Section(String Product_category) {
 
-		JSLibrary.ScrollintoView(driver, TestUtil.getElementByXpath(
-				"//h1[starts-with(@class,'page-heading')]/span[contains(text(),'" + Product_category + "')]"));
+		JSLibrary.ScrollintoView(driver, TestUtil.getElementByXpath(CheckoutProcess.product_category_locator_start
+				+ Product_category + CheckoutProcess.locator_end_common));
 
 	}
 
@@ -83,9 +87,10 @@ public class CheckoutProcess extends TestBase {
 	 * @return product unit price
 	 */
 
-	public static String get_product_price(String Product) {
+	public static String get_Product_Price(String Product) {
 
-		TestUtil.moveToElement(driver, TestUtil.getElementByXpath("//a[contains(text(),'" + Product + "')]"));
+		TestUtil.moveToElement(driver, TestUtil.getElementByXpath(
+				CheckoutProcess.product_locator_start + Product + CheckoutProcess.locator_end_common));
 		JavaUtility.wait_for_element_clickable(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
 				CheckoutProcess.add_to_cart, driver);
 		String prod_price = TestUtil.Gettext(TestUtil.getElement(CheckoutProcess.product_price));
@@ -96,7 +101,7 @@ public class CheckoutProcess extends TestBase {
 	/**
 	 * This function clicks the add to cart button
 	 */
-	public static void add_product_to_cart() {
+	public static void add_Product_To_Cart() {
 
 		TestUtil.click(TestUtil.getElement(CheckoutProcess.add_to_cart));
 
@@ -108,13 +113,12 @@ public class CheckoutProcess extends TestBase {
 	 * @return the product name showing at the popup
 	 */
 
-	public static String get_product_name_for_checkout() {
+	public static String get_Product_Name_For_Checkout() {
 
 		JavaUtility.wait_for_element_clickable(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
 				CheckoutProcess.proceed_to_checkout, driver);
 
-		String productname = TestUtil
-				.Gettext(TestUtil.getElement(CheckoutProcess.product_name_for_checkout));
+		String productname = TestUtil.Gettext(TestUtil.getElement(CheckoutProcess.product_name_for_checkout));
 
 		return productname;
 
@@ -126,13 +130,12 @@ public class CheckoutProcess extends TestBase {
 	 * @return the product unit price showing at the popup
 	 */
 
-	public static String get_product_price_for_checkout() {
+	public static String get_Product_Price_For_Checkout() {
 
 		JavaUtility.wait_for_element_clickable(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
 				CheckoutProcess.proceed_to_checkout, driver);
 
-		String productprice = TestUtil
-				.Gettext(TestUtil.getElement(CheckoutProcess.product_price_for_checkout));
+		String productprice = TestUtil.Gettext(TestUtil.getElement(CheckoutProcess.product_price_for_checkout));
 
 		return productprice;
 
@@ -144,12 +147,11 @@ public class CheckoutProcess extends TestBase {
 	 * @return the total order price showing at the popup
 	 */
 
-	public static String get_total_price_for_checkout() {
+	public static String get_Total_Price_For_Checkout() {
 
 		JavaUtility.wait_for_element_clickable(Long.parseLong(prop.getProperty("CommonExplicitWaitTime")),
 				CheckoutProcess.proceed_to_checkout, driver);
-		String totalprice = TestUtil
-				.Gettext(TestUtil.getElement(CheckoutProcess.total_price_for_checkout));
+		String totalprice = TestUtil.Gettext(TestUtil.getElement(CheckoutProcess.total_price_for_checkout));
 
 		return totalprice;
 
@@ -159,7 +161,7 @@ public class CheckoutProcess extends TestBase {
 	 * This function clicks on the Proceed to check out button at the popup
 	 */
 
-	public static void click_proceed_to_checkout_popup() {
+	public static void click_Proceed_To_Checkout_Popup() {
 
 		TestUtil.click(TestUtil.getElement(CheckoutProcess.proceed_to_checkout));
 
@@ -172,7 +174,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return displayed breadcrumb text
 	 */
 
-	public static String get_checkout_pages_breadcrumb_text() {
+	public static String get_Checkout_Pages_Breadcrumb_Text() {
 
 		String breadcrumb_text = TestUtil
 				.Gettext(TestUtil.getElement(CheckoutProcess.checkout_pages_breadcrumb_common));
@@ -186,10 +188,9 @@ public class CheckoutProcess extends TestBase {
 	 * @return the product name
 	 */
 
-	public static String get_shopping_cart_product_name() {
+	public static String get_Shopping_Cart_Product_Name() {
 
-		JSLibrary.ScrollintoView(driver,
-				TestUtil.getElement(CheckoutProcess.checkout_pages_breadcrumb_common));
+		JSLibrary.ScrollintoView(driver, TestUtil.getElement(CheckoutProcess.checkout_pages_breadcrumb_common));
 		String shopping_cart_product_name = TestUtil
 				.Gettext(TestUtil.getElement(CheckoutProcess.shopping_cart_product_display));
 
@@ -203,7 +204,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return the product unit price
 	 */
 
-	public static String get_shopping_cart_product_price() {
+	public static String get_Shopping_Cart_Product_Price() {
 
 		String shopping_cart_product_price = TestUtil
 				.Gettext(TestUtil.getElement(CheckoutProcess.shopping_cart_product_price));
@@ -217,7 +218,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return the total order price
 	 */
 
-	public static String get_shopping_cart_total_price() {
+	public static String get_Shopping_Cart_Total_Price() {
 
 		String shopping_cart_total_price = TestUtil
 				.Gettext(TestUtil.getElement(CheckoutProcess.shopping_cart_total_price));
@@ -229,7 +230,7 @@ public class CheckoutProcess extends TestBase {
 	 * This function clicks on the proceed to checkout button at shopping cart page
 	 */
 
-	public static void proceed_to_checkout_shopping_cart_page() {
+	public static void proceed_To_Checkout_Shopping_Cart_Page() {
 
 		JSLibrary.ScrollintoView(driver,
 				TestUtil.getElement(CheckoutProcess.shopping_cart_page_proceed_checkout_button));
@@ -244,7 +245,7 @@ public class CheckoutProcess extends TestBase {
 	 * 
 	 */
 
-	public static void proceed_to_checkout_common() {
+	public static void proceed_To_Checkout_Common() {
 
 		JSLibrary.ScrollintoView(driver,
 				TestUtil.getElement(CheckoutProcess.checkout_pages_common_proceed_to_checkout));
@@ -257,10 +258,9 @@ public class CheckoutProcess extends TestBase {
 	 * This function clicks the terms and condition checkbox at the shipping tab
 	 */
 
-	public static void click_terms_checkbox_shipping_tab() {
+	public static void click_Terms_Checkbox_Shipping_Tab() {
 
-		JSLibrary.ScrollintoView(driver,
-				TestUtil.getElement(CheckoutProcess.shipping_pages_terms_checkbox_id));
+		JSLibrary.ScrollintoView(driver, TestUtil.getElement(CheckoutProcess.shipping_pages_terms_checkbox_id));
 
 		TestUtil.click(TestUtil.getElement(CheckoutProcess.shipping_pages_terms_checkbox_id));
 
@@ -272,11 +272,13 @@ public class CheckoutProcess extends TestBase {
 	 * @param payment_method holds the desired payment method info
 	 */
 
-	public static void select_payment_method(String payment_method) {
+	public static void select_Payment_Method(String payment_method) {
 
-		JSLibrary.ScrollintoView(driver, TestUtil.getElementByXpath("//a[contains(@class,'" + payment_method + "')]"));
+		JSLibrary.ScrollintoView(driver, TestUtil.getElementByXpath(
+				CheckoutProcess.payment_method_locator_start + payment_method + CheckoutProcess.locator_end_common));
 
-		TestUtil.click(TestUtil.getElementByXpath("//a[contains(@class,'" + payment_method + "')]"));
+		TestUtil.click(TestUtil.getElementByXpath(
+				CheckoutProcess.payment_method_locator_start + payment_method + CheckoutProcess.locator_end_common));
 
 	}
 
@@ -286,11 +288,10 @@ public class CheckoutProcess extends TestBase {
 	 * @return the heading of Order Summary page
 	 */
 
-	public static String get_order_summary_heading() {
+	public static String get_Order_Summary_Heading() {
 
 		JSLibrary.ScrollintoView(driver, TestUtil.getElement(CheckoutProcess.order_summary_heading));
-		String order_summary_heading = TestUtil
-				.Gettext(TestUtil.getElement(CheckoutProcess.order_summary_heading));
+		String order_summary_heading = TestUtil.Gettext(TestUtil.getElement(CheckoutProcess.order_summary_heading));
 		return order_summary_heading;
 
 	}
@@ -301,7 +302,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return the total order amount
 	 */
 
-	public static String get_order_summary_order_amount() {
+	public static String get_Order_Summary_Order_Amount() {
 
 		String order_amount = TestUtil
 				.Gettext(TestUtil.getElement(CheckoutProcess.order_summary_order_total_amount_id));
@@ -315,7 +316,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return the total order amount
 	 */
 
-	public static String get_order_confirmation_order_amount() {
+	public static String get_Order_Confirmation_Order_Amount() {
 
 		String order_confirmation_amount = TestUtil
 				.Gettext(TestUtil.getElement(CheckoutProcess.order_confirmation_price));
@@ -330,10 +331,9 @@ public class CheckoutProcess extends TestBase {
 	 * @return the order Reference Id
 	 */
 
-	public static String get_order_confirmation_reference_id() {
+	public static String get_Order_Confirmation_Reference_Id() {
 
-		String order_confirmation_text = TestUtil
-				.Gettext(TestUtil.getElement(CheckoutProcess.order_confirmation_text));
+		String order_confirmation_text = TestUtil.Gettext(TestUtil.getElement(CheckoutProcess.order_confirmation_text));
 		int index_reference_text = order_confirmation_text.indexOf("reference");
 		String reference_id = order_confirmation_text.substring(index_reference_text + 10, index_reference_text + 19);
 		return reference_id;
@@ -351,7 +351,7 @@ public class CheckoutProcess extends TestBase {
 	 * @return the reference of Order_History page
 	 */
 
-	public static Order_History open_order_history(String reference_id, String order_price, String payment_method,
+	public static Order_History open_Order_History(String reference_id, String order_price, String payment_method,
 			WebDriver driver) {
 
 		TestUtil.click(TestUtil.getElement(CheckoutProcess.order_history_link));

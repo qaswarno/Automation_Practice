@@ -34,7 +34,7 @@ public class MyAccountPageSteps extends TestBase {
 
 	@Then("^user clicks on My Personal Information button$")
 	public void user_clicks_on_My_Personal_Information_button() throws Throwable {
-		MyAccount.click_personal_information();
+		MyAccount.click_Personal_Information();
 
 	}
 
@@ -47,7 +47,7 @@ public class MyAccountPageSteps extends TestBase {
 	@And("^landed on the Personal information page$")
 	public void landed_on_the_Personal_information_page() throws Throwable {
 
-		String personal_info_breadcrumb = MyAccount.get_personal_info_breadcrumb_text();
+		String personal_info_breadcrumb = MyAccount.get_Personal_Info_Breadcrumb_Text();
 		assertTrue(personal_info_breadcrumb.contains(prop.getProperty("personal_information_contains")));
 
 	}
@@ -59,7 +59,7 @@ public class MyAccountPageSteps extends TestBase {
 
 	@Then("^user enters updated FirstName and clicks on save button$")
 	public void user_enters_updated_FirstName_and_clicks_on_save_button() throws Throwable {
-		MyAccount.update_firstname_personal_info(prop.getProperty("updated_firstname"), prop.getProperty("Password"));
+		MyAccount.update_Firstname_Personal_Info(prop.getProperty("updated_firstname"), prop.getProperty("Password"));
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class MyAccountPageSteps extends TestBase {
 	@And("^varifies updated FirstName at the header$")
 	public void varifies_updated_FirstName_at_the_header() throws Throwable {
 
-		String header_user_name = MyAccount.get_user_name_from_header();
+		String header_user_name = MyAccount.get_User_Name_From_Header();
 		assertTrue(header_user_name.contains(prop.getProperty("updated_firstname")));
 
 	}

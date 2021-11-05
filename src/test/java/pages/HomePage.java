@@ -32,7 +32,7 @@ public class HomePage extends TestBase {
 	 * 
 	 * @return the title of index page
 	 */
-	public static String return_Landing_Page_title() {
+	public static String return_Landing_Page_Title() {
 
 		String landing_page_title = driver.getTitle();
 		return landing_page_title;

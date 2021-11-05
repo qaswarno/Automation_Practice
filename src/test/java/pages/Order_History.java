@@ -53,7 +53,7 @@ public class Order_History extends TestBase {
 	 * 
 	 * @return the breadcrumb text of Order History
 	 */
-	public static String get_breadcrumb_text() {
+	public static String get_Breadcrumb_Text() {
 
 		String breadcrumb_text = TestUtil
 				.Gettext(TestUtil.getElement(Order_History.order_history_breadcrumb_text));
@@ -68,7 +68,7 @@ public class Order_History extends TestBase {
 	 * @return the order Reference id displaying the first row
 	 */
 
-	public static String get_order_reference_id() {
+	public static String get_Order_Reference_Id() {
 
 		String orderreference = TestUtil.Gettext(TestUtil.getElement(Order_History.order_reference));
 		return orderreference;
@@ -82,7 +82,7 @@ public class Order_History extends TestBase {
 	 * @return the Total order Amount displaying the first row
 	 */
 
-	public static String get_order_price() {
+	public static String get_Order_Price() {
 
 		String orderprice = TestUtil.Gettext(TestUtil.getElement(Order_History.orderprice));
 		return orderprice;		
@@ -96,7 +96,7 @@ public class Order_History extends TestBase {
 	 * @return the Payment Method displaying the first row
 	 */
 
-	public static String get_payment_method() {
+	public static String get_Payment_Method() {
 
 		String payment_method = TestUtil.Gettext(TestUtil.getElement(Order_History.paymentmethod));
 		return payment_method;

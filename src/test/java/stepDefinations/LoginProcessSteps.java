@@ -3,9 +3,7 @@ package stepDefinations;
 import static org.testng.Assert.assertEquals;
 
 import base.TestBase;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.MyAccount;
@@ -28,10 +26,10 @@ public class LoginProcessSteps extends TestBase{
 	public void user_opens_the_site_and_logged_in() throws Throwable {
 	    
 		new HomePage(driver);
-		String index_page_title = HomePage.return_Landing_Page_title();
+		String index_page_title = HomePage.return_Landing_Page_Title();
 		assertEquals(index_page_title, prop.getProperty("Home_page_expected_title"));
 		HomePage.open_Login_Page();
-		String login_page_title=LoginPage.return_login_Page_title();
+		String login_page_title=LoginPage.return_Login_Page_Title();
 		assertEquals(login_page_title,prop.getProperty("login_page_expected_title"));
 		myaccount=LoginPage.login(prop.getProperty("Username"), prop.getProperty("Password"));
 	    

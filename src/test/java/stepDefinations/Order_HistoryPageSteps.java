@@ -25,7 +25,7 @@ public class Order_HistoryPageSteps extends TestBase {
 
 	@And("^landed on order history page$")
 	public void user_landed_on_order_history_page() throws Throwable {
-		String breadcumb_text=Order_History.get_breadcrumb_text();
+		String breadcumb_text=Order_History.get_Breadcrumb_Text();
 		assertTrue(breadcumb_text.contains(prop.getProperty("order_history_expected_breadcrumb_contains")));
 	}
 	
@@ -37,11 +37,11 @@ public class Order_HistoryPageSteps extends TestBase {
 	@Then("^user verifies the order reference payment method and order price$")
 	public void user_verifies_the_order_reference_payment_method_and_order_price() throws Throwable {
 		
-		String ord_ref=Order_History.get_order_reference_id();
+		String ord_ref=Order_History.get_Order_Reference_Id();
 		assertEquals(ord_ref,Order_History.reference_id);
-		String ord_price=Order_History.get_order_price();
+		String ord_price=Order_History.get_Order_Price();
 		assertEquals(ord_price,Order_History.order_price);
-		String ord_payment_method=Order_History.get_payment_method();
+		String ord_payment_method=Order_History.get_Payment_Method();
 		assertEquals(ord_payment_method,JavaUtility.replace_dash_with_space(Order_History.payment_method));
 	   
 	}
