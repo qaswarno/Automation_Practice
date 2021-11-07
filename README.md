@@ -11,3 +11,12 @@ In order to execute the test cases,
 Maven commands:
 
 mvn install -> In order to execute the test scenarios and generate Cucumber Report
+
+After execution Extent Report and Cucumber Report will get generated.
+
+<b>Extent Report will be available at</b>
+..\Automation_Practice\target\cucumber-reports\Automation_Practice.html
+
+<b>Cucumber Report will be available at</b>
+..\Automation_Practice\target\cucumber-reports\cucumber-report-html\cucumber-html-reports\feature-overview.html
+
