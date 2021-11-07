@@ -1,0 +1,304 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "User log in to the site",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6323471100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user opens the site and logged in",
+            "match": {
+              "location": "LoginProcessSteps.login_Process()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49253200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "verify MyAccount page opens",
+            "match": {
+              "location": "MyAccountPageSteps.verify_My_Account_Page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 22710783200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarioStart()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Purchase Tshirt product and verify the order",
+        "description": "",
+        "id": "purchase-tshirt-and-update-first-name;purchase-tshirt-product-and-verify-the-order",
+        "after": [
+          {
+            "result": {
+              "duration": 164600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.take_Screenshot_AfterScenarioFinish(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 6561477700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenarioFinish()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6358718000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks on the \"T-shirts\" product category link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "T-shirts",
+                  "offset": 20
+                }
+              ],
+              "location": "CheckoutSteps.user_clicks_on_the_product_link(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6957820000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "choose \"Faded Short Sleeve T-shirts\" product for purchase",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Faded Short Sleeve T-shirts",
+                  "offset": 8
+                }
+              ],
+              "location": "CheckoutSteps.select_Product(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13440056000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "proceed through the checkout process",
+            "match": {
+              "location": "CheckoutSteps.checkout_Process()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 194700300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "get the order reference id from Order Confirmation page for future reference",
+            "match": {
+              "location": "CheckoutSteps.get_Order_Reference_Id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3866177400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user clicks on back to order link and landed on Order History Page",
+            "match": {
+              "location": "Order_HistoryPageSteps.click_Back_To_Order_History_And_Verify()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 165087100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user verifies the order reference payment method and order price",
+            "match": {
+              "location": "Order_HistoryPageSteps.verify_Order()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@PurchaseTShirtProduct"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "User log in to the site",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 14072058600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user opens the site and logged in",
+            "match": {
+              "location": "LoginProcessSteps.login_Process()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 39773100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "verify MyAccount page opens",
+            "match": {
+              "location": "MyAccountPageSteps.verify_My_Account_Page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 20628467000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarioStart()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Update user First Name from Personal information",
+        "description": "",
+        "id": "purchase-tshirt-and-update-first-name;update-user-first-name-from-personal-information",
+        "after": [
+          {
+            "result": {
+              "duration": 53000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.take_Screenshot_AfterScenarioFinish(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 6080669800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenarioFinish()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2721873600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user clicks on My Personal Information button",
+            "match": {
+              "location": "MyAccountPageSteps.click_Personal_Information_Button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 142273800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "landed on the Personal information page",
+            "match": {
+              "location": "MyAccountPageSteps.verify_Personal_Information_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5463166200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user enters updated FirstName and clicks on save button",
+            "match": {
+              "location": "MyAccountPageSteps.update_Firstname_And_Save()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63763100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "verifies updated FirstName at the header",
+            "match": {
+              "location": "MyAccountPageSteps.verify_Firstname()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 20,
+            "name": "@UpdateFirstName"
+          }
+        ]
+      }
+    ],
+    "name": "Purchase TShirt and Update First Name",
+    "description": " Description:This feature is to test the product purchase scenario and verifies the generated order and also verifies \n First name updatation done correctly",
+    "id": "purchase-tshirt-and-update-first-name",
+    "keyword": "Feature",
+    "uri": "Test_Scenarios.feature"
+  }
+]
