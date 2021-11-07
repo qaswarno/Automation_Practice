@@ -27,7 +27,7 @@ public class CheckoutSteps extends TestBase {
 	 */
 
 	@Given("^user clicks on the \"(.*)\" product category link$")
-	public void user_clicks_on_the_product_link(String product_category) throws Throwable {
+	public void select_Product_Category(String product_category) throws Throwable {
 		MyAccount.selectProductCategory(product_category);
 		String product_listing_page_title = CheckoutProcess.return_ProductListing_Page_Title();
 		assertTrue(product_listing_page_title.contains(product_category));
