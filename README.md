@@ -20,3 +20,9 @@ After execution Extent Report and Cucumber Report will get generated.
 <b>Cucumber Report will be available at</b>
 ..\Automation_Practice\target\cucumber-reports\cucumber-report-html\cucumber-html-reports\feature-overview.html
 
+<b>Further improvement scope</b>
+
+* We can implement parallel execution by using Thread Local concept
+* Execution through soucelab can be integrated in this Framework
+
+
