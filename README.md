@@ -23,6 +23,6 @@ After execution Extent Report and Cucumber Report will get generated.
 <b>Further improvement scope</b>
 
 * We can implement parallel execution by using Thread Local concept
-* Execution through soucelab can be integrated in this Framework
+* Execution through Sauce labs can be integrated in this Framework
 
 
